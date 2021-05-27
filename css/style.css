@@ -1,0 +1,703 @@
+/** BIENVENUE DANS LE CSS DE AUTOS  ***************************************************************************/
+
+@font-face {
+    font-family: "futur";
+    src: url("../FUTRFW.woff") format("woff"); }
+   
+
+:root {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    --text-primary: rgb(255, 255, 255);
+    --text-secondary: rgb(0, 0, 0);
+    --bg-primary:#b6b6b6;
+    --bg-secondary: #ffffff; }
+
+
+body {
+    color: dimgrey;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0; }
+
+
+/** Style sur la scrollbar  ************************************************************************************/
+
+    body::-webkit-scrollbar{
+    width: 0.25rem; }
+
+    body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255); }
+
+    body::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); }
+    
+
+
+
+/** Navigation version ordinateur *************************************************************************** */
+
+
+    .navbarcool {
+        width: 5rem;
+        height: 100vh;
+        position: fixed;
+        background-image: url(../img/texture.png);
+        transition: width 200ms ease; }
+
+    .navbar-navcool {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+
+    .nav-itemcool {
+        width: 100%; }
+
+    .nav-itemcool:last-child {
+        margin-top: auto; }
+
+    .nav-linkcool {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        color: var(--text-primary);
+        text-decoration: none; }
+
+    .nav-linkcool:hover {
+
+        background: var(--bg-secondary);
+        color: var(--text-secondary); }
+
+    .link-text {
+        display: none;
+        margin-left: 1rem; }
+
+    .nav-linkcool svg {
+        min-width: 2rem;
+        margin: 0 1.5rem; }
+
+    .navbarcool:hover {
+        width: 16rem; }
+
+    .navbarcool:hover .link-text {
+        display: block; }
+
+/**Petit volet glissant (demande aide)*************************************************************************/
+
+    #volet {
+	    position: fixed;
+        width: 250px;
+	    padding: 10px;
+	    background: #000000; color: #fff; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+    #volet a.ouvrir {
+        position: fixed;
+	    padding: 10px 25px;
+	    background: #555;
+	    color: #fff;
+	    text-decoration: none; }
+
+    #volet a.ouvrir {
+	    position: absolute;
+	    right: -88px;
+	    top: 350px;
+	    -ms-transform: rotate(270deg);
+	    -moz-transform: rotate(270deg);
+	    -webkit-transform: rotate(270deg);
+	    transform: rotate(270deg);
+        border-radius: 0 0 8px 8px;}
+
+    #volet {
+	    -webkit-transition: all .5s ease-in;
+	    transition: all .5s ease-in;
+        position:fixed;
+	    left: -270px; top: 170px;}
+
+    #volet:target {
+	    left: 0;}
+
+    #volet_clos:target #volet {
+	/* retourne à ta place */ }
+
+    #volet a.fermer {
+	    display: none; 
+        color: #fff;
+        border-radius: 40px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "futur";
+        text-align: center;
+        font-size: 10px ;
+        background: #4b4b4b;
+        padding: 5px;
+        transition: background 0.25s; }
+        
+
+    #volet_clos:target #volet {
+	    left: -270px; }
+
+    #volet:target a.ouvrir {
+	    display: none; }
+
+    #volet:target a.fermer {
+	    display: block; }
+
+    .levolet {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center; }
+        
+    .numero {
+        flex-basis: 80%;
+        padding: 0 15px;
+        text-align: center;
+        transition: transform 0.15s; }
+        
+    a.btn4 {
+        color: #fff;
+        border-radius: 40px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "futur";
+        text-align: center;
+        font-size: 8px ;
+        background: #ff0000;
+        padding: 5px;
+        transition: background 0.25s; }
+        
+    a.btn4:hover {
+        background: #060b4e; }
+
+
+/** Page d'accueil du site  ********************************************************************************/
+
+        .en-tête {
+            padding-left: 260px;
+            background-color: black; }
+      
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 400px;
+            right: 30px;
+            margin: auto; }
+
+        video {
+	        max-width: 115%;
+	        height: auto; }
+
+        .news {
+            background: black;
+            padding-left: 10px;
+            display:none; }
+
+/** Les actualités en page d'accueil  ****************************/
+
+        .nosProducts {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center; }
+
+        .lesproducts {
+            flex-basis: 28%;
+            padding: 0 -20px;
+            text-align: right;
+            transition: transform 0.15s;
+            font-family: "futur"; }
+
+        .lesproducts img {
+            width: 400px; }
+
+
+/*Navigation Menu Burger ************************************************************************************/
+
+.main-nav-list {
+    display: none; }
+
+.main-nav ul {
+    text-align: center; }
+
+.main-nav li {
+    display: inline; }
+
+.main-nav a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.5em 1.5em;
+    color:#fff;
+    font-family: "futur";
+    text-decoration: none ; }
+
+#menuToggle {
+    display: none; }
+
+.menu-icon {
+    display: none; }
+
+
+/*[MENU: REPROGRAMMATION] ***********************************************************************************/
+        
+        .nosMarques {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center; }
+
+        .lesmarques {
+            flex-basis: 28%;
+            padding: 0 -20px;
+            text-align: center;
+            transition: transform 0.15s;
+            font-family: "futur"; }
+    
+        .lesmarques img {
+            width: 70px; }
+
+        .title {
+            text-align: center;
+            font-family: "futur"; }
+
+        .title2 {
+            text-align: center;
+            font-family: "futur";
+            font-size: 13px ;
+            color:#b6b6b6; }
+
+        a.btn {
+            color: #fff;
+            border-radius: 40px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: "futur";
+            text-align: center;
+            font-size: 10px ;
+            background: #131b92;
+            padding: 10px;
+            transition: background 0.25s; }
+
+        a.btn:hover {
+            background: #060b4e; }
+
+/*[MENU: BIO ETHANOL]***************************************************************************************/
+
+.nosBio {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; }
+
+.lesBio {
+    flex-basis: 28%;
+    padding: 0 -20px;
+    text-align: right;
+    color: #b8b8b8;
+    transition: transform 0.15s;
+    font-family: "futur"; }
+    
+.lesBio img {
+    width: 400px; }
+
+.lesBio h4 {
+    font-size: 20px; }
+
+.bioplus {
+    background-image: url(../img/texturebio.jpg);
+    background-position: fixed;
+    background-repeat: repeat;
+    background-size: 1500px;
+    color: #fff; }
+    
+.avis {
+    background-image: url(../img/textureavis.jpg);
+    background-position: fixed;
+    background-repeat: repeat;
+    background-size: 1500px;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; }
+
+.titrecarte2 {
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+/*[MENU: CONTACT]*******************************************************************************************/
+
+        .contacter {
+            color: #fff;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center; }
+
+        .nosContact {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center; }
+
+        .lesContact {
+            flex-basis: 28%;
+            padding: 0 -20px;
+            text-align: right;
+            color: #b8b8b8;
+            transition: transform 0.15s;
+            font-family: "futur";
+            font-size: 20px; }
+    
+/* Formulaire de contact *************/
+
+    h1{
+        text-align: center; }
+  
+    .form-style {
+        margin:10px auto;
+        width: 400px;
+        padding: 20px 12px 10px 20px;
+        font: 14px "futur"; }
+  
+    .form-style td {
+        padding: 0;
+        display: block;
+        list-style: none;
+        margin: 10px 0 0 0; }
+  
+    .form-style label{
+        margin:0 0 3px 0;
+        padding:0px;
+        display:block;
+        font-weight: bold; }
+  
+    .form-style .required{
+        color:red; }
+  
+    .form-style input[type=submit], .form-style input[type=reset]{
+        background: #a3a3a3;
+        padding: 8px 15px 8px 15px;
+        border: none;
+        color: #fff; }
+  
+    .form-style input[type=submit]:hover, .form-style input[type=reset]:hover{
+        background: #4b4b4b;
+        box-shadow:none;
+        -moz-box-shadow:none;
+        -webkit-box-shadow:none; }
+  
+    .form-style .field-textarea{
+        height: 100px; }
+  
+    .form-style input[type=text], 
+    .form-style input[type=email],
+    textarea{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border:1px solid #BEBEBE;
+        padding: 7px;
+        margin:0px;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;  }
+  
+    .form-style .long {
+        width: 100%; }
+  
+    .form-style input[type=text]:focus, 
+    .form-style input[type=email]:focus,
+    .form-style textarea:focus{
+        -moz-box-shadow: 0 0 8px #88D5E9;
+        -webkit-box-shadow: 0 0 8px #88D5E9;
+        box-shadow: 0 0 8px #88D5E9;
+        border: 1px solid #88D5E9; }
+  
+    .error{
+        color: #D8000C;
+        background-color: #FFBABA; }
+  
+
+/*Footer du site ! ***********************************************************************************/
+
+.nosemails {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; }
+
+.emails {
+    flex-basis: 80%;
+    padding: 0 15px;
+    text-align: right;
+    transition: transform 0.15s; }
+
+a.btn2 {
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "futur";
+    text-align: center;
+    font-size: 10px ;
+    background: #4b4b4b;
+    padding: 5px;
+    transition: background 0.25s; }
+
+a.btn2:hover {
+    background: #060b4e; }
+
+
+
+/* VERSION MOBILE************************************************************************************ */
+@media screen and (max-width: 768px) {
+
+	header {
+		z-index: 1;
+	}
+    .news {
+    display: block;
+    }
+
+
+    .navbarcool {
+        display: none;
+    }
+    .en-tête{
+        display: none;
+    }
+    .main-nav {
+        width: 100%;
+        height: auto;
+    }
+	
+    .main-nav ul {
+        display: block;
+        max-height: 0;
+    	overflow: hidden;
+    	-webkit-transition: max-height 0.6s;
+    	-moz-transition: max-height 0.6s;
+        -ms-transition: max-height 0.6s;
+        -o-transition: max-height 0.6s;
+    	transition: max-height 0.6s;
+		/* pour faire pop le menu depuis la gauche > remplacer max-height par max-width */
+		/* pour faire sortir le menu depuis la droite > ajouter un float: right */
+        background-image: url(../img/texture.png);
+		margin-top: 10px;
+    }
+	
+    .main-nav ul li {
+        text-align: left;
+
+        display: block;
+    }
+
+    .main-nav ul li a {
+        color: rgb(255, 255, 255);
+    }
+	
+	.main-nav ul li:last-child {
+		border:none;
+	}
+	
+    .menu-icon {
+		width: 50px;
+		height: inherit;
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 0;
+    }
+	
+    #menuToggle:checked ~ ul {
+        max-height: 270px;
+        /* max-width: 350px; On replace aussi ici le max-heght par le max-width */ 
+    }
+	
+    .menu-icon i {
+        font-size: 1.7em;
+		color: #fff;
+    }
+/* SECTION ACCTUEIL *****************************************************************************/
+
+    .logo {
+        position: static;
+        max-width: 350px;}
+
+    .lesproducts {
+		margin-bottom: 65px;
+        flex-basis: 50%;
+
+	}
+	.lesproducts img {
+        width: 310px;
+    }
+    .title {
+        text-align: center;
+    }
+
+/* SECTION REPROGRAMMATION **********************************************************************/
+    .logo3 {
+        max-width: 350px;}
+
+    .lesmarques {
+		margin-bottom: 65px;
+        flex-basis: 50%;
+	}
+	.lesmarques img {
+        width: 100px;
+    }
+
+    a.btn {
+        font-size: 7px;
+    }
+
+    br {
+        display: none;
+
+ }
+ /* SECTION BIO ETHANOL **********************************************************************/
+    .lesbio {
+    margin-bottom: 65px;
+    flex-basis: 50%;
+}
+    .lesbio img {
+    width: 10px;
+
+}
+ /* CONTACT ***************************************************************************************/
+    .logo6 {
+    width: 500px;
+}
+    .lesContact {
+    margin-bottom: 65px;
+    flex-basis: 50%;
+
+}
+    .form-style {
+    width: 350px;
+}
+/* VERSION TABLETTE****************************************************************************** */
+@media screen and (min-width: 769px, max-width: 1083px) {
+   
+	header {
+		z-index: 1;
+	}
+    .news {
+    display: block;
+    }
+    .logo {
+    position: static;
+    width: 700px;   
+
+
+    }
+    .videoaccueil {
+          display: none;
+    }
+
+    .title2 {
+    font-size: 20px;
+    }
+
+    .navbarcool {
+        display: none;
+    }
+    .en-tête{
+        display: none;
+    }
+    .main-nav {
+        width: 100%;
+        height: auto;
+    }
+	
+    .main-nav ul {
+        display: block;
+        max-height: 0;
+    	overflow: hidden;
+    	-webkit-transition: max-height 0.6s;
+    	-moz-transition: max-height 0.6s;
+        -ms-transition: max-height 0.6s;
+        -o-transition: max-height 0.6s;
+    	transition: max-height 0.6s;
+		/* pour faire pop le menu depuis la gauche > remplacer max-height par max-width */
+		/* pour faire sortir le menu depuis la droite > ajouter un float: right */
+        background-image: url(../img/texture.png);
+		margin-top: 10px;
+        background-repeat: no-repeat;
+    }
+	
+    .main-nav ul li {
+        text-align: left;
+
+        display: block;
+    }
+
+    .main-nav ul li a {
+        color: rgb(255, 255, 255);
+    }
+	
+	.main-nav ul li:last-child {
+		border:none;
+	}
+	
+    .menu-icon {
+		width: 50px;
+		height: inherit;
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 0;
+    }
+	
+    #menuToggle:checked ~ ul {
+        max-height: 270px;
+        /* max-width: 350px; On replace aussi ici le max-heght par le max-width */ 
+    }
+	
+    .menu-icon i {
+        font-size: 1.7em;
+		color: #fff;
+    }
+
+    /* SECTION ACCTUEIL ****************************************************************************/
+    .lesproducts {
+		margin-bottom: 65px;
+        flex-basis: 50%;
+	}
+	.lesproducts img {
+        width: 610px;
+    }
+    .title {
+        text-align: center;
+    }
+
+       /* SECTION REPROGRAMMATION *******************************************************************/
+    .lesmarques {
+		margin-bottom: 65px;
+        flex-basis: 50%;
+	}
+	.lesmarques img {
+        width: 200px;
+    }
+    a.btn {
+        font-size: 10px;
+    }
+    br {
+        display: none;
+
+    }
+    .logo3 {
+        width: 740px;
+    }
+
+}
